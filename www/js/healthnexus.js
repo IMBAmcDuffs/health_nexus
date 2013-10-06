@@ -64,13 +64,13 @@ var app = {
 
 
 var api = {
-    baseUrl: 'http://healthnexus.imbalanced.tv/api/',
+    baseUrl: 'http://imba.tv/healthnexus/api/',
 	output: '#app_content',
 	messages: '#app_messages',
 	templates: '#loose-templates',
     questions: null,
     initialize: function() {
-		console.log('initapi');
+		alert('test');
 		api.getQuestions();
     },
     authUser: function(user,pass) {
@@ -81,26 +81,28 @@ var api = {
 	},
 	getQuestions: function() {
         var url = api.baseUrl + 'hn_question/get';
-        $.get(url, function(data){
-            var questions = data.questions;
-			alert(data.status);
-			api.handleTemplate('questions', questions);
-        });
+        $.ajax(url, 
+			{
+				type: 'GET',
+				dataType: 'jsonp',
+				jsonpCallback: 'jsonCallback',
+				contentType: "application/json",
+				success: function(data) {
+					console.log(data);
+					var questions = data.questions;
+					alert(data.status);
+					api.handleTemplate('questions', questions);
+				},
+				error: function(e) {
+				   console.log(e.message);
+				}
+			}
+		);
 	}
 };
 
 $(document).ready(function() {
 
-  $('#menu-btn').on('touchstart',function(){
-    $('#menu').toggleClass('active');
-  });
-  $('.menu-icon').parent('li').on('click',function() {
-      $('.menu-icon').parent('li').removeClass('active');
-      $(this).addClass('active');
-      $('#menu').toggleClass('active');
-      appviews.showView($(this).attr('data-view'));
-  });
-$('.menu-icon, .dash-icon, .camper-item, .subview-back').noClickDelay();
 });
 
 document.addEventListener('touchmove', function() {
