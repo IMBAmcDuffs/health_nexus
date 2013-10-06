@@ -70,7 +70,6 @@ var api = {
 	templates: '#loose-templates',
     questions: null,
     initialize: function() {
-		alert('test');
 		api.getQuestions();
     },
     authUser: function(user,pass) {
@@ -81,7 +80,8 @@ var api = {
 	},
 	getQuestions: function() {
         var url = api.baseUrl + 'hn_question/get';
-        $.ajax(url, 
+ 		alert(url);
+       $.ajax(url, 
 			{
 				type: 'GET',
 				dataType: 'jsonp',
