@@ -30,7 +30,7 @@ var app = {
         document.addEventListener('resume',app.resume, false);
         app.adjustView();
         api.initialize();
-		alert("ready");
+		
     },
     online: function() {
         global.connectionStatus = true;
@@ -83,7 +83,7 @@ var api = {
         var url = api.baseUrl + 'hn_question/get';
         $.get(url, function(data){
             var questions = data.questions;
-			console.log(data);
+			alert(data.status);
 			api.handleTemplate('questions', questions);
         });
 	}
