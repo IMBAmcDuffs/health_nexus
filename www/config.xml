@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.sapphire.app.campviews.beta.dyf"
+        version   = "1.0.0">
+
+    <name>Health Nexus</name>
+
+    <description>
+        Health Nexus ALPHA build - Hack 4 Reno 2013!
+    </description>
+
+    <author href="http://imba.tv" email="mcduffs.crapfling@gmail.com">
+        Chris Crevling
+    </author>
+
+	<gap:platform name="android" />
+	
+    <preference name="phonegap-version" value="3.0.0" />
+
+    <preference name="orientation" value="portrait" />
+
+    <preference name="webviewbounce" value="false" />
+
+    <preference name="show-splash-screen-spinner" value="false" />
+
+    <preference name="auto-hide-splash-screen" value="false" />
+	
+	<preference name="splash-screen-duration" value="10000"/>
+	
+    <gap:splash src="res/screen/ipad_landscape.png" gap:platform="android" width="1024" height="768" />
+
+    <gap:splash src="res/screen/ipad_retina_landscape.png" gap:platform="ios" width="2048" height="1496" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+
+    <access origin="*" />
+</widget>
