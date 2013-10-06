@@ -67,10 +67,7 @@ var appdb = {
     initialize: function() {
         global.db = window.openDatabase("ndadb", "1.0", "CampAppData", 5000000);
         global.db.transaction(function(tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS campers (camper_id,name,dob,sex,school,shirt_size,pic)');
-            tx.executeSql('CREATE TABLE IF NOT EXISTS checks (camper_id, station_id, camp_id, label, value, PRIMARY KEY (camper_id, station_id, camp_id, label))');
-            tx.executeSql('CREATE TABLE IF NOT EXISTS cmlogs (id unique, camper_id, camp_id, date, tod, glucose, insulin1, insulin2, insulin3, carbs, pumpchange, medications, note, initials)');
-            tx.executeSql('CREATE TABLE IF NOT EXISTS camper_data (camper_id, label, value, form_id, form_name)');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS questions (question_id,question,post_date)');
             tx.executeSql('CREATE TABLE IF NOT EXISTS api_cache (api,data,multi)');
         },function() { appdb.errorCB('db init errors') }, function() { appdb.successCB('db init complete') });
     },

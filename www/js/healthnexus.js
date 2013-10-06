@@ -5,6 +5,7 @@ var api = {
 	templates: '#loose-templates',
     questions: null,
     initialize: function() {
+		console.log('initapi');
 		api.getQuestions();
     },
     authUser: function(user,pass) {
