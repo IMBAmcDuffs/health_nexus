@@ -8,6 +8,96 @@
         <title>Health Nexus</title>
     </head>
     <body>
+    <div id="loose-templates" class="hidden">
+    	<div class="box" id="box_template">
+        	<div class="box-content">
+                <div class="box-timestamp">Posted <span>x</span> minutes ago</div>
+            	<div class="box-question"></div>
+                <div class="box-comments">
+                	
+                </div>
+            </div>
+        	<div class="box-options">
+           		<div class="button" id="upvote" data-page="questions" data-action="upvotePost">
+                	<img src="img/upvote.png" class="upvote" />
+                </div>
+           		<div class="button hidden" id="upvoted">
+                	<img src="img/upvoted.png" class="upvote" />
+                </div>
+           		<div class="button" id="downvote" data-page="questions" data-action="upvotePost">
+                	<img src="img/downvote.png" class="downvote" />
+                </div>
+           		<div class="button hidden" id="downvoted">
+                	<img src="img/downvoted.png" class="downvoted" />
+                </div>
+           		<div class="button" id="report" data-page="questions" data-action="reportPost">
+                	<img src="img/report.png" class="report" />
+                </div>
+           		<div class="button hidden" id="reported">
+                	<img src="img/reported.png" class="reported" />
+                </div>
+            </div>
+        </div>
+        <div class="box" id="comments">
+        	<div class="comment-options" data-uid="0">
+           		<div class="button" id="upvote" data-page="questions" data-action="upvoteComment">
+                	<img src="img/upvote.png" class="upvote" />
+                </div>
+           		<div class="button hidden" id="upvoted">
+                	<img src="img/upvoted.png" class="upvote" />
+                </div>
+           		<div class="button" id="downvote" data-page="questions" data-action="upvoteComment">
+                	<img src="img/downvote.png" class="downvote" />
+                </div>
+           		<div class="button hidden" id="downvoted">
+                	<img src="img/downvoted.png" class="downvoted" />
+                </div>
+           		<div class="button" id="report" data-page="questions" data-action="reportComment">
+                	<img src="img/report.png" class="report" />
+                </div>
+           		<div class="button hidden" id="reported">
+                	<img src="img/reported.png" class="reported" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="home" id="home">
+        	<div class="box_order">
+            	<div class="button" id="most_recent">Most Recent Questions</div>
+            	<div class="button" id="highest_rated">Highest Rated Questions</div>
+            </div>
+        </div>
+        
+        <div class="question" id="post">
+        	<form id="post_form" name="post">
+            	<textarea name="question" class="input">
+                	Tap to ask a question...
+                </textarea>
+                
+                <input type="submit" class="hidden" value="Submit" />
+                <div class="button submit" id="submit_post">
+                	Ask it!
+                </div>
+            </form>
+        </div>
+
+        <div class="local" id="list">
+        	<ul class="local-list">
+            	<li class="list-title">This list is generated from Google places and based off of your location.</li>
+            </ul>
+        </div>
+        <li class="local" id="item">
+        	<div class="local-item-name">
+            	
+            </div>
+        	<div class="local-item-address">
+            	
+            </div>
+        	<div class="local-item-link">
+            	
+            </div>
+        </li>
+    </div>
         <div class="container">
         	<div class="header">
             	<div class="banner">
@@ -17,8 +107,8 @@
                 </div>
                 <div id="main_nav">
                 	<ul>
+                        <li data-page="home">View Questions</li>
                         <li data-page="questions" data-action="post">Post Question</li>
-                        <li data-page="questions" data-action="view">View Questions</li>
                     	<li data-page="local" data-action="list">Local Health</li>
                     </ul>
                 </div>
@@ -28,11 +118,12 @@
                 	
                 </div>
             	<div id="app_content">
-                	content will load up here
+                	
                 </div>
             </div>
             <div class="footer">
-            	&copy; 2013 - Chris mcDuffs Crevling
+            	<div class="disclaimer">All public data within this app and the data saved within the database is to allow full anonymity to you the user. If you wish to request a report of the database and its ability to keep your private info private please email <a href="mailto:mcduffs.crapfling@gmail.com">Chris Crevling</a></div>
+            	<div class="copy">&copy; 2013 - Chris mcDuffs Crevling</div>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>

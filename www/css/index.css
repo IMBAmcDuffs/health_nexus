@@ -5,7 +5,8 @@ body { overflow: hidden; }
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
- 
+.hidden { display:none; }
+
 .container {
 	margin:0px auto;
 	width:90%;
@@ -16,13 +17,9 @@ body { overflow: hidden; }
 .header {
 	float:left;
 	width:100%;
-	background:#7FAABB;
 }
 .banner {
-	
-}
-.logo_text {
-	
+	text-align:center;
 }
 #main_nav {
 	float:left;
@@ -42,7 +39,7 @@ body { overflow: hidden; }
 	margin:0px;
 	padding:10px;
 	text-align:center;
-	border-right:2px solid #7FAABB;
+	border-right:2px solid #018398;
 	font-weight:bold;
 	font-size:130%;
 }
@@ -58,16 +55,41 @@ body { overflow: hidden; }
 	background:#fff;
 }
 .app_messages {
-	
+	float:left;
+	width:100%;
 }
 .app_content {
-	
+	float:left;
+	width:100%;
 }
 	/* app page content */
+	#home {
+		
+	}
+		.boxes {
+			
+		}
+			.box {
+				
+			}
+			.box-options {
+				
+			}
+	
+	#post {
+		
+	}
+	
+	#local {
+		
+	}
 	
 .footer {
 	float:left;
 	width:100%;
 	background:#7FAABB;
 	padding:20px 0px;
+	text-align:center;
+	color:#fff;
+	font-size:80%;
 }
