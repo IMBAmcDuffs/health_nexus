@@ -1,3 +1,21 @@
+var global = {
+    user: null,
+    active: null,
+    campid: 20,
+    camperid: null,
+    connectionStatus: null,
+    camps: [],
+    campers: [],
+    db: null,
+    store: null,
+    moved: false,
+    scrollers: {},
+    forms: {
+      checkin: [],
+      logs: []
+    }
+};
+
 var app = {
     initialize: function() {
         this.bind();
@@ -12,6 +30,7 @@ var app = {
         document.addEventListener('resume',app.resume, false);
         app.adjustView();
         api.initialize();
+		alert("ready");
     },
     online: function() {
         global.connectionStatus = true;
@@ -69,3 +88,21 @@ var api = {
         });
 	}
 };
+
+$(document).ready(function() {
+
+  $('#menu-btn').on('touchstart',function(){
+    $('#menu').toggleClass('active');
+  });
+  $('.menu-icon').parent('li').on('click',function() {
+      $('.menu-icon').parent('li').removeClass('active');
+      $(this).addClass('active');
+      $('#menu').toggleClass('active');
+      appviews.showView($(this).attr('data-view'));
+  });
+$('.menu-icon, .dash-icon, .camper-item, .subview-back').noClickDelay();
+});
+
+document.addEventListener('touchmove', function() {
+    global.moved = true;
+},false);
