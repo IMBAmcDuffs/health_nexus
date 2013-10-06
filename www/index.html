@@ -5,154 +5,39 @@
         <meta name = "format-detection" content = "telephone=no"/>
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello Cordova</title>
+        <title>Health Nexus</title>
     </head>
     <body>
-        <div id="viewport">
-            <div id="app">
-                <div id="menu-port">
-                    <h2>Menu</h2>
-                </div>
-                <div id="views-port">
-                    <div id="display">
-                        <div id="header">
-                          <div id="header-content">
-                            <div class="icon-menu" id="menu-btn"></div>
-                            <div id="menu">
-                              <ul>
-                                <li id="menu-dash" class="active" data-view="dashboard"><span class="icon-home"></span><a href="javascript: void(0);" class="menu-icon">Dashboard</a></li>
-                                <li id="menu-checkin" data-view="checkin"><span class="icon-download"></span><a href="javascript: void(0);" class="menu-icon">Checkin</a></li>
-                                <li id="menu-logs" data-view="logs"><span class="icon-notebook"></span><a href="javascript: void(0);" class="menu-icon">Journal</a></li>
-                                <li id="menu-campers" data-view="campers"><span class="icon-users"></span><a href="javascript: void(0);" class="menu-icon">Campers</a></li>
-                                <li id="menu-checkout" data-view="checkout"><span class="icon-upload"></span><a href="javascript: void(0);" class="menu-icon">Checkout</a></li>
-                              </ul>
-                            </div>
-                            <div id="connection-status"></div>
-                            <div id="title">Camp<span>Views Beta</span><span id="section"></span></div>
-                          </div>
-                        </div>
-                        <div id="views">
-                            <div class="view" id="dashboard-view">
-                                <div class="content">
-                                  <div class="dashpad">
-                                    <a href="javascript: void(0);" data-view="checkin" data-menu="checkin" class="dash-icon bg-blue icon-download"></a>
-                                    <a href="javascript: void(0);" data-view="logs" data-menu="logs" class="dash-icon bg-drk-green icon-notebook"></a>
-                                    <a href="javascript: void(0);" data-view="campers" data-menu="campers" class="dash-icon bg-orange icon-users"></a>
-                                    <a href="javascript: void(0);" data-view="checkout" data-menu="checkout" class="dash-icon bg-drk-blue icon-upload"></a>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="view" id="checkin-view">
-                              <div class="sidebar bg-sidebar">
-                                <div class="sidebar-content" id="checkinforms">
-                                  <div class="formarea" id="checkinform-area">
-                                    
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content">
-                                <div class="sidebarpad">
-                                    <div class="campers subview active" id="camperscheckin">
-                                        <ul class="campers-list">
-
-                                        </ul>
-                                        <div class="cabin-filter">
-                                            <ul>
-                                                <li class="cf active">All</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="camper subview" id="camper-checkin">
-                                        <button class="subview-back">back</button>
-                                        <h2 class="cname">Test Camper</h2>
-                                        <div class="cimage icon-user"></div>
-                                        <div class="cinfo">
-                                          <div class="cdob">DOB: <span></span></div>
-                                          <div class="cgender">Gender: <span></span></div>
-                                        </div>
-                                        <div class="clear"></div>
-                                        <h2>Camper Data</h2>
-                                        <div id="camperCheckinDataScroller">
-                                          <div id="camper-checkin-data">
-                                          
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="view" id="campers-view">
-                              <div class="sidebar bg-sidebar">
-
-                              </div>
-                              <div class="content">
-                                <div class="sidebarpad">
-
-                                </div>
-                              </div>
-                            </div>
-                            <div class="view" id="logs-view">
-                              <div class="sidebar bg-sidebar">
-                                 <div class="sidebar-content" id="logforms">
-                                  <div class="formarea" id="logform-area">
-                                    
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content">
-                                <div class="sidebarpad">
-                                    <div class="campers subview active" id="camperslogs">
-                                        <ul class="campers-list">
-
-                                        </ul>
-                                        <div class="cabin-filter">
-                                            <ul>
-                                                <li class="cf active">All</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="camper subview" id="camper-logs">
-                                        <button class="subview-back">back</button>
-                                        <h2 class="cname">Test Camper</h2>
-                                        <div class="cimage icon-user"></div>
-                                        <div class="cinfo">
-                                          <div class="cdob">DOB: <span></span></div>
-                                          <div class="cgender">Gender: <span></span></div>
-                                        </div>
-                                        <div class="clear"></div>
-                                        <h2>Camper Data</h2>
-                                        <div id="camperLogsDataScroller">
-                                          <div id="camper-logs-data">
-                                          
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="view" id="checkout-view">
-                              <div class="sidebar bg-sidebar">
-
-                              </div>
-                              <div class="content">
-                                <div class="sidebarpad">
-
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div id="footer">
-
-                        </div>
+        <div class="container">
+        	<div class="header">
+            	<div class="banner">
+                	<div class="logo">
+                    	<img src="img/logo.png" />
                     </div>
                 </div>
+                <div id="main_nav">
+                	<ul>
+                        <li data-page="questions" data-action="post">Post Question</li>
+                        <li data-page="questions" data-action="view">View Questions</li>
+                    	<li data-page="local" data-action="list">Local Health</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-container">
+            	<div id="app_messages">
+                	
+                </div>
+            	<div id="app_content">
+                	content will load up here
+                </div>
+            </div>
+            <div class="footer">
+            	&copy; 2013 - Chris mcDuffs Crevling
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/lib/jquery-2.0.0.min.js"></script>
-        <script type="text/javascript" src="js/lib/iscroll.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/campman-1.0.0.js"></script>
+        <script type="text/javascript" src="js/healthnexus.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
