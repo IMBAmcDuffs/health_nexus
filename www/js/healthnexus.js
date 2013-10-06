@@ -19,6 +19,8 @@ var global = {
 var app = {
     initialize: function() {
         this.bind();
+		api.initialize();
+
     },
     bind: function() {
         document.addEventListener('deviceready', app.deviceready, false);
@@ -70,6 +72,7 @@ var api = {
 	templates: '#loose-templates',
     questions: null,
     initialize: function() {
+		alert('test');
 		api.getQuestions();
     },
     authUser: function(user,pass) {
@@ -80,24 +83,10 @@ var api = {
 	},
 	getQuestions: function() {
         var url = api.baseUrl + 'hn_question/get';
- 		alert(url);
-       $.ajax(url, 
-			{
-				type: 'GET',
-				dataType: 'jsonp',
-				jsonpCallback: 'jsonCallback',
-				contentType: "application/json",
-				success: function(data) {
-					console.log(data);
-					var questions = data.questions;
-					alert(data.status);
-					api.handleTemplate('questions', questions);
-				},
-				error: function(e) {
-				   console.log(e.message);
-				}
-			}
-		);
+        $.get(url, function(data){
+            alert('it happened');
+            
+        },{dataType : 'jsonp'});
 	}
 };
 
