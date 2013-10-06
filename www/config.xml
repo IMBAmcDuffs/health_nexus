@@ -28,9 +28,9 @@
 	
 	<preference name="splash-screen-duration" value="10000"/>
 	
-    <gap:splash src="res/screen/ipad_landscape.png" gap:platform="android" width="1024" height="768" />
+    <gap:splash src="res/screen/droid_portrait.png" gap:platform="android" width="1024" height="768" />
 
-    <gap:splash src="res/screen/ipad_retina_landscape.png" gap:platform="ios" width="2048" height="1496" />
+    <gap:splash src="res/screen/droid_10_portrait.png" gap:platform="android" width="1600" height="2560" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/camera"/>
